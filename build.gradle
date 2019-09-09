@@ -1,0 +1,59 @@
+apply plugin: 'com.android.library'
+
+android {
+    // 编译工具配置
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // V7
+    api 'com.android.support:appcompat-v7:28.0.0'
+    api 'com.android.support:design:28.0.0'
+    api 'com.android.support:animated-vector-drawable:28.0.0'
+
+    // kotlin
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // retrofit
+    api 'com.squareup.retrofit2:retrofit:2.4.0'
+    api 'com.squareup.retrofit2:converter-gson:2.4.0'
+    api 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+    // multidex
+    api 'com.android.support:multidex:1.0.3'
+    // rx android
+    api 'io.reactivex.rxjava2:rxjava:2.1.3'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    // rx lifecycle
+    api 'com.trello:rxlifecycle:1.0'
+    api 'com.trello:rxlifecycle-components:1.0'
+
+    // glide
+    api 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    api 'jp.wasabeef:glide-transformations:3.0.1'
+
+    // recycler view
+    api 'com.android.support:recyclerview-v7:28.0.0'
+    
+    // FlycoTabLayout
+    api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+
+    // material ProgressBar
+    api 'me.zhanghai.android.materialprogressbar:library:1.4.2'
+
+    // greenDao
+    api 'org.greenrobot:greendao:3.2.2'
+
+    // event bus
+    api 'org.greenrobot:eventbus:3.1.1'
+}

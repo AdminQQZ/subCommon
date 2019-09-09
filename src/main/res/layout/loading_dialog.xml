@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/_xpopup_round3_dark_bg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <com.videoapp.libcommon.ui.widget.LoadingView
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <ProgressBar
+            android:layout_width="@dimen/dp_30"
+            android:visibility="gone"
+            android:layout_height="@dimen/dp_30"
+            android:indeterminateDrawable="@drawable/anim_rotate_loading"/>
+
+        <TextView
+            android:id="@+id/tv_loading_dialog_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:ellipsize="end"
+            android:textSize="15sp"
+            android:textColor="#DDDDDD"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+</RelativeLayout>
